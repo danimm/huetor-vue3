@@ -9,7 +9,7 @@
             class="text-center"
             :title="$t('home.cards.card1.title')"
             :img-src='Image7'
-            img-top=''
+            img-top
         >
           <p class="card-text">
             {{ $t('home.cards.card1.text') }}
@@ -21,7 +21,7 @@
             class="text-center"
             :title="$t('home.cards.card2.title')"
             :img-src='Image4'
-            img-top=''
+            img-top
         >
           <p class="card-text mb-4">
             {{ $t('home.cards.card2.text') }}
