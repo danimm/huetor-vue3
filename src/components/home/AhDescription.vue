@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <b-row class="mt-4" align-h='center'>
+    <div class="mt-4">
 
       <div class="col-lg-6 col-md-12">
         <img
@@ -20,7 +20,7 @@
           <p>{{ $t('home.description.text4') }}</p>
         </div>
       </div>
-    </b-row>
+    </div>
   </div>
 
 </template>
@@ -29,24 +29,13 @@
 export default {
   computed: {
     link() {
-      switch (this.$i18n.locale) {
-        case 'es':
-          return 'https://via.eviivo.com/es-ES/alojamientoshuetor';
-          break;
-        case 'en':
-          return 'https://via.eviivo.com/en-GB/alojamientoshuetor';
-          break;
-        case 'de':
-          return 'https://via.eviivo.com/de-DE/alojamientoshuetor';
-          break;
-        case 'fr':
-          return 'https://via.eviivo.com/fr-FR/alojamientoshuetor';
-          break;
-
-        default:
-          return 'https://via.eviivo.com/AlojamientosHuetor';
-          break;
+      const links = {
+        es: 'https://via.eviivo.com/es-ES/alojamientoshuetor',
+        en: 'https://via.eviivo.com/en-GB/alojamientoshuetor',
+        de: 'https://via.eviivo.com/de-DE/alojamientoshuetor',
+        fr: 'https://via.eviivo.com/fr-FR/alojamientoshuetor',
       }
+      return links[this.$i18n.locale];
     }
   }
 };

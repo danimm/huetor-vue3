@@ -3,9 +3,9 @@
     <h2 class="text-center">
       {{ $t('home.cards.title') }}
     </h2>
-    <b-row class="mt-5 mb-5" align-h='center'>
+    <div class="mt-5 mb-5" align-h='center'>
       <div class="col-lg-3 col-sm-12 col-md-12">
-        <b-card
+        <div
             class="text-center"
             :title="$t('home.cards.card1.title')"
             :img-src='Image7'
@@ -14,10 +14,10 @@
           <p class="card-text">
             {{ $t('home.cards.card1.text') }}
           </p>
-        </b-card>
+        </div>
       </div>
       <div class="col-lg-3 col-sm-12 col-md-12">
-        <b-card
+        <div
             class="text-center"
             :title="$t('home.cards.card2.title')"
             :img-src='Image4'
@@ -26,19 +26,19 @@
           <p class="card-text mb-4">
             {{ $t('home.cards.card2.text') }}
           </p>
-        </b-card>
+        </div>
       </div>
       <div class="col-lg-3 col-sm-12 col-md-12">
-        <b-card
+        <div
             class="text-center"
             :title="$t('home.cards.card3.title')"
             :img-src='Image10' img-top>
           <p class="card-text">
             {{ $t('home.cards.card3.text') }}
           </p>
-        </b-card>
+        </div>
       </div>
-    </b-row>
+    </div>
   </div>
 </template>
 

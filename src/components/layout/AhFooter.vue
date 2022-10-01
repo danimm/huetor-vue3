@@ -1,7 +1,7 @@
 <template lang="pug">
   .wrapper.pt-4.pb-5
     b-container
-      b-row
+      div
         .col-lg-4.col-md-12.text-white.contact
           img.logo(:src='Logo', alt='Logo Huetor')
           p.mt-4
@@ -17,7 +17,7 @@
             a.text-white(
               href="https://www.google.com/maps/place/Alojamientos+Huetor/@36.8786239,-4.1887103,1735m/data=!3m1!1e3!4m7!3m6!1s0xd7269d63c8dbefb:0x2f0a38fa3fbf8baa!5m1!1s2018-11-25!8m2!3d36.881525!4d-4.18549"
               target="_blank"
-              ) Paraje la Rotura, 29712 La Viñuela, Málaga, España
+            ) Paraje la Rotura, 29712 La Viñuela, Málaga, España
           p
             img.icon(:src='Mail', alt='mail-icon')
             a.text-white.email(href="mailto:info@alojamientoshuetor.com", target="_blank") info@alojamientoshuetor.com
@@ -55,7 +55,7 @@
             a.text-white(:href="$t('footer.links.andalucia.src')", target="_blank") {{ $t('footer.links.andalucia.text') }}
           p.text-white
     b-container
-      b-row
+      div
         .col.my-4
           img(src='@/assets/images/banner2.jpg', alt=`banner`)
       b-row.lastFooter
@@ -63,7 +63,7 @@
           p
           | {{ $t('footer.made')}}
           a.text-white.email(href="mailto:info@danimm.com", target="_blank") info@danimm.com
-          
+
         .col-sm-10.col-md-6.text-right
           //- router-link.nav-link(to="/") Inicio
           //- router-link.nav-link(to="reservations") Reservas
@@ -76,12 +76,12 @@
 <script>
 export default {
   props: {
-    Logo: { type: String, required: true },
-    Phone: { type: String, required: true },
-    Home: { type: String, required: true },
-    Mail: { type: String, required: true },
-    Instagram: { type: String, required: true },
-    Facebook: { type: String, required: true }
+    Logo: {type: String, required: true},
+    Phone: {type: String, required: true},
+    Home: {type: String, required: true},
+    Mail: {type: String, required: true},
+    Instagram: {type: String, required: true},
+    Facebook: {type: String, required: true}
   },
   data() {
     return {
@@ -89,42 +89,42 @@ export default {
         {
           id: 1,
           url:
-            'https://firebasestorage.googleapis.com/v0/b/huetor-16ddf.appspot.com/o/Instagram%2F1_image.png?alt=media&token=11dac811-b53e-46b7-96d0-0894ed514d78'
+              'https://firebasestorage.googleapis.com/v0/b/huetor-16ddf.appspot.com/o/Instagram%2F1_image.png?alt=media&token=11dac811-b53e-46b7-96d0-0894ed514d78'
         },
         {
           id: 2,
           url:
-            'https://firebasestorage.googleapis.com/v0/b/huetor-16ddf.appspot.com/o/Instagram%2F2_image.png?alt=media&token=22a96fd8-6d35-4bfb-9925-1572031f11fb'
+              'https://firebasestorage.googleapis.com/v0/b/huetor-16ddf.appspot.com/o/Instagram%2F2_image.png?alt=media&token=22a96fd8-6d35-4bfb-9925-1572031f11fb'
         },
         {
           id: 3,
           url:
-            'https://firebasestorage.googleapis.com/v0/b/huetor-16ddf.appspot.com/o/Instagram%2F3_image.png?alt=media&token=01620dc3-851a-4464-a06c-397fb6996efc'
+              'https://firebasestorage.googleapis.com/v0/b/huetor-16ddf.appspot.com/o/Instagram%2F3_image.png?alt=media&token=01620dc3-851a-4464-a06c-397fb6996efc'
         },
         {
           id: 4,
           url:
-            'https://firebasestorage.googleapis.com/v0/b/huetor-16ddf.appspot.com/o/Instagram%2F4_image.png?alt=media&token=e9543d89-981d-48df-91cd-dd012c3248d9'
+              'https://firebasestorage.googleapis.com/v0/b/huetor-16ddf.appspot.com/o/Instagram%2F4_image.png?alt=media&token=e9543d89-981d-48df-91cd-dd012c3248d9'
         },
         {
           id: 5,
           url:
-            'https://firebasestorage.googleapis.com/v0/b/huetor-16ddf.appspot.com/o/Instagram%2F5_image.png?alt=media&token=9b9e5ebb-0dcd-49bc-b8b3-b09d496ae3d0'
+              'https://firebasestorage.googleapis.com/v0/b/huetor-16ddf.appspot.com/o/Instagram%2F5_image.png?alt=media&token=9b9e5ebb-0dcd-49bc-b8b3-b09d496ae3d0'
         },
         {
           id: 6,
           url:
-            'https://firebasestorage.googleapis.com/v0/b/huetor-16ddf.appspot.com/o/Instagram%2F6_image.png?alt=media&token=aa1732a5-2ec3-4d41-a722-16b299e5ab57'
+              'https://firebasestorage.googleapis.com/v0/b/huetor-16ddf.appspot.com/o/Instagram%2F6_image.png?alt=media&token=aa1732a5-2ec3-4d41-a722-16b299e5ab57'
         },
         {
           id: 7,
           url:
-            'https://firebasestorage.googleapis.com/v0/b/huetor-16ddf.appspot.com/o/Instagram%2F7_image.png?alt=media&token=8a519a34-7bb5-4852-86cf-700aa7e27d03'
+              'https://firebasestorage.googleapis.com/v0/b/huetor-16ddf.appspot.com/o/Instagram%2F7_image.png?alt=media&token=8a519a34-7bb5-4852-86cf-700aa7e27d03'
         },
         {
           id: 8,
           url:
-            'https://firebasestorage.googleapis.com/v0/b/huetor-16ddf.appspot.com/o/Instagram%2F8_image.png?alt=media&token=397ec329-f948-4fe9-b90d-bf959731f160'
+              'https://firebasestorage.googleapis.com/v0/b/huetor-16ddf.appspot.com/o/Instagram%2F8_image.png?alt=media&token=397ec329-f948-4fe9-b90d-bf959731f160'
         }
       ]
     };
@@ -142,12 +142,14 @@ export default {
 .wrapper {
   background-color: #333a40;
 }
+
 .grid-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(4, 120px);
   grid-gap: 10px;
 }
+
 img {
   max-width: 100%;
   width: 100%;
@@ -155,47 +157,57 @@ img {
   object-fit: cover;
   /* object-position: left; */
 }
+
 .logo {
   max-width: 200px;
   height: auto;
 }
+
 .icon {
   max-width: 20px;
   height: auto;
   margin-right: 5px;
 }
+
 .lastFooter {
   margin-top: 30px;
   border-top: gray 2px solid;
   padding-top: 30px;
   color: white;
 }
+
 .lastFooter a {
   color: white;
   padding-right: 12px;
 }
+
 .lastFooter .col {
   padding-left: 0;
   padding-right: 0;
 }
+
 .nav-link {
   /* display: none; */
   cursor: pointer;
 }
+
 @media screen and (max-width: 992px) {
   /* .grid-container {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 120px);
     } */
 }
+
 @media screen and (max-width: 768px) {
   h4 {
     margin-bottom: 0;
     margin-top: 20px;
   }
+
   .contact {
     margin-bottom: 30px;
   }
+
   /* .col-sm-12 p {
       display: none;
     } */
@@ -206,6 +218,7 @@ img {
     display: flex;
     justify-content: center;
   }
+
   .lastFooter p {
     display: none;
   }

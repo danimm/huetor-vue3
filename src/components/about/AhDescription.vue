@@ -1,11 +1,11 @@
 <template>
-  <b-container>
-    <b-row>
+  <div>
+    <div>
       <b-col cols="6">
         <b-img :src="Image14" height="690"/>
       </b-col>
-    </b-row>
-  </b-container>
+    </div>
+  </div>
   <b-col>
     <div class="content">
       <h2>Aquí encontrarás paz y descanso. Ven a conocernos</h2>

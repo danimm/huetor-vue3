@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid">
-    <b-container>
-      <b-row class="mb-5 mt-5">
+    <div>
+      <div class="mb-5 mt-5">
         <div class="col-lg-6 col-md-12">
           <h3 class="title">
             {{ $t('home.rooms.title') }}
@@ -34,8 +34,8 @@
             </div>
           </div>
         </div>
-      </b-row>
-    </b-container>
+      </div>
+    </div>
   </div>
 
 
