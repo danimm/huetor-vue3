@@ -1,25 +1,25 @@
 <template>
   <main>
-    <AhMain
-      Slide1="Slide1"
-      :Slide2="Slide2"
-      :Slide3="Slide3"
-    />
-    <AhDescription />
-    <AhColumns />
+    <!--    <AhMain-->
+    <!--      Slide1="Slide1"-->
+    <!--      :Slide2="Slide2"-->
+    <!--      :Slide3="Slide3"-->
+    <!--    />-->
+    <AhDescription/>
+    <AhColumns/>
     <AhRooms
-      :Image9="Image9"
-      :Image11="Image11"
-      :Image12="Image12"
-      :Image13="Image13"
+        :Image9="Image9"
+        :Image11="Image11"
+        :Image12="Image12"
+        :Image13="Image13"
     />
     <AhCards
-      :Image4="Image4"
-      :Image7="Image7"
-      :Image10="Image10"
+        :Image4="Image4"
+        :Image7="Image7"
+        :Image10="Image10"
     />
-    <AhOffer />
-    <AhMap />
+    <AhOffer/>
+    <AhMap/>
   </main>
 </template>
 
@@ -45,6 +45,6 @@ const Image9 = ref('https://firebasestorage.googleapis.com/v0/b/huetor-16ddf.app
 const Image10 = ref('https://firebasestorage.googleapis.com/v0/b/huetor-16ddf.appspot.com/o/images%2FH-81162951850.JPEG?alt=media&token=efb5f15b-8e01-4bd9-bae5-0373d68f872a')
 const Image11 = ref('https://firebasestorage.googleapis.com/v0/b/huetor-16ddf.appspot.com/o/images%2FIMG_1159%202.JPG?alt=media&token=d6e1f203-36c4-46f2-bd3c-997d6bedb853')
 const Image12 = ref('https://firebasestorage.googleapis.com/v0/b/huetor-16ddf.appspot.com/o/images%2FImage12.jpg?alt=media&token=ad6d81a1-74df-4817-aecc-031c1ce3690b')
-const Image13 = ref('https://firebasestorage.googleapis.com/v0/b/huetor-16ddf.appspot.com/o/images%2FImage23.JPG?alt=media&token=08bc4ed2-82ae-488e-af1d-dc8ebc014033)
+const Image13 = ref('https://firebasestorage.googleapis.com/v0/b/huetor-16ddf.appspot.com/o/images%2FImage23.JPG?alt=media&token=08bc4ed2-82ae-488e-af1d-dc8ebc014033')
 </script>
 

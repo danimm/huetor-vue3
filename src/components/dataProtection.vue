@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid">
     <!--    <b-button id="show-btn" @click="$bvModal.show('bv-modal-example')">Open Modal</b-button>-->
-    <b-modal
+    <div
         ref="modal"
         id="bv-modal-example"
         hide-footer
@@ -25,14 +25,14 @@
           </p>
           <p>Para administrar o deshabilitar estas cookies haz click en Configuración de Cookies.</p>
         </div>
-        <b-button class="mt-3" block @click="openCookieConfig()">Configuración de Cookies</b-button>
-        <b-button variant="success" class="mt-3" block @click="acceptCookies()">Aceptar</b-button>
+        <button class="mt-3" block @click="openCookieConfig()">Configuración de Cookies</button>
+        <button variant="success" class="mt-3" block @click="acceptCookies()">Aceptar</button>
       </template>
       <template v-if="showCookieConfig && !showCookieText">
         <cookie-config @back="closeCookieConfig" @closeModal="hideModal"/>
       </template>
       <cookie-text v-if="showCookieText" @back="closeCookieText"/>
-    </b-modal>
+    </div>
   </div>
 </template>
 

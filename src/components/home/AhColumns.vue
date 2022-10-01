@@ -12,7 +12,7 @@
 
       <div class="text-container">
         <p>{{ $t('home.columns.text1') }}</p>
-        <p>{{ $t('home.columns.text2') }}</p
+        <p>{{ $t('home.columns.text2') }}</p>
       </div>
 
       <div class="img-container-2">
