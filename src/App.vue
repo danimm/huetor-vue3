@@ -20,7 +20,7 @@ addEventListener("load", () => {
     <div class="content" :class="{ 'showContent': isLoaded }">
       <AhHeader/>
       <RouterView/>
-      <!--      <AhFooter/>-->
+      <AhFooter/>
     </div>
   </div>
 </template>
