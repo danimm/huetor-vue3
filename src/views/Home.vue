@@ -1,10 +1,6 @@
 <template>
   <main>
-    <!--    <AhMain-->
-    <!--      Slide1="Slide1"-->
-    <!--      :Slide2="Slide2"-->
-    <!--      :Slide3="Slide3"-->
-    <!--    />-->
+    <AhMain/>
     <AhDescription/>
     <AhColumns/>
     <AhRooms
