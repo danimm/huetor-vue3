@@ -104,7 +104,7 @@ const goLegal = () => {
     <div class="container">
       <div>
         <div class="col my-4">
-          <img src='@/assets/images/banner2.jpg' alt="banner"/>
+          <img src='/images/banner2.jpg' alt="banner"/>
         </div>
       </div>
       <div class="lastFooter">
