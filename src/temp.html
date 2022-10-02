@@ -1,74 +1,25 @@
 <template lang="pug">
-    .wrapper.pt-4.pb-5
-        b-container
-            div
-                .col-lg-4.col-md-12.text-white.contact
-                    img.logo(:src='Logo', alt='Logo Huetor')
-                    p.mt-4
-                        // Hotel WordPress Theme is the best hotel, hostel, resort, apartment presentation WordPress theme. With its beautiful design and high coding quality, this theme can showcase your unique accommodations to the world and attract more visitors to your website.
-                    p Comarca de la Axarquía - Málaga - España
-                    //- p Trataremos de responder su correo electrónico antes de 24 horas.
-                    p {{ $t('footer.text1') }}
-                    p
-                        img.icon(:src='Phone', alt='phone-icon')
-                        a.text-white(href="tel:+34659589562") +34 659 589 562
-                    p
-                        img.icon(:src='Home', alt='home-icon')
-                        a.text-white(
-                            href="https://www.google.com/maps/place/Alojamientos+Huetor/@36.8786239,-4.1887103,1735m/data=!3m1!1e3!4m7!3m6!1s0xd7269d63c8dbefb:0x2f0a38fa3fbf8baa!5m1!1s2018-11-25!8m2!3d36.881525!4d-4.18549"
-                            target="_blank"
-                        ) Paraje la Rotura, 29712 La Viñuela, Málaga, España
-                    p
-                        img.icon(:src='Mail', alt='mail-icon')
-                        a.text-white.email(href="mailto:info@alojamientoshuetor.com", target="_blank") info@alojamientoshuetor.com
-                    p
-                        img.icon(:src="Instagram", alt="instagram-icon")
-                        a.text-white(href="https://www.instagram.com/alojamientos_huetor/", target="_blank") alojamientos_huetor
-                    p
-                        img.icon(:src="Facebook", alt="facebook-icon")
-                        a.text-white(href="https://www.facebook.com/alojamientoshuetor/", target="_blank") Alojamientos Huetor
-                .col-lg-4.col-md-6.mb-4
-                    h4.mb-4.text-white {{ $t('footer.titleInstagram') }}
-                    .grid-container
-                        picture(v-for="(image,index ) in IGlinks")
-                            img(:src='image.url', alt=``)
-                //- image v-for
-                .col-lg-4.col-md-6
-                    h4.text-white {{ $t('footer.titleLinks') }}
-                    p.text-white.mt-4
-                        a.text-white(:href="$t('footer.links.activities.src')", target="_blank") {{ $t('footer.links.activities.text') }}
-                    p.text-white
-                        a.text-white(:href="$t('footer.links.malaga.src')", target="_blank") {{ $t('footer.links.malaga.text') }}
-                    p.text-white
-                        a.text-white(:href="$t('footer.links.cordoba.src')", target="_blank") {{ $t('footer.links.cordoba.text') }}
-                    p.text-white
-                        a.text-white(:href="$t('footer.links.sevilla.src')", target="_blank") {{ $t('footer.links.sevilla.text') }}
-                    p.text-white
-                        a.text-white(:href="$t('footer.links.cadiz.src')", target="_blank") {{ $t('footer.links.cadiz.text') }}
-                    p.text-white
-                        a.text-white(:href="$t('footer.links.granada.src')", target="_blank") {{ $t('footer.links.granada.text') }}
-                    p.text-white
-                        a.text-white(:href="$t('footer.links.jaen.src')", target="_blank") {{ $t('footer.links.jaen.text') }}
-                    p.text-white
-                        a.text-white(:href="$t('footer.links.almeria.src')", target="_blank") {{ $t('footer.links.almeria.text') }}
-                    p.text-white
-                        a.text-white(:href="$t('footer.links.andalucia.src')", target="_blank") {{ $t('footer.links.andalucia.text') }}
-                    p.text-white
-        b-container
-            div
-                .col.my-4
-                    img(src='@/assets/images/banner2.jpg', alt=`banner`)
-            b-row.lastFooter
-                .col-sm-12.col-md-6
-                    p
-                    | {{ $t('footer.made')}}
-                    a.text-white.email(href="mailto:info@danimm.com", target="_blank") info@danimm.com
-
-                .col-sm-10.col-md-6.text-right
-                    //- router-link.nav-link(to="/") Inicio
-                    //- router-link.nav-link(to="reservations") Reservas
-                    //- router-link.nav-link(to="gallery") Galería
-                    //- router-link.nav-link(to="contact") Contacto
-                    a.nav-link(@click="goLegal") {{ $t('footer.legal') }}
-
+    b-container
+        b-navbar(toggleable="lg",type="light")
+            b-navbar-toggle(target="nav_collapse")
+            b-navbar-brand(to="/")
+                img(:src="Logo", alt="Alojamientos Huetor",class="d-inline-block align-top")
+            b-collapse#nav_collapse(is-nav)
+                b-navbar-nav(class="ml-auto")
+                    router-link.nav-link(to="/") {{ $t('header.home') }}
+                    a.nav-link.btn.btn-warning(:href="link.eviivo" target="_blank") {{ $t('header.reservations') }}
+                    a.nav-link.ml-2(:href="link.hellehollis" target="_blank") {{ $t('header.carReservation') }}
+                    router-link.nav-link(to="reviews") {{ $t('header.reviews') }}
+                    router-link.nav-link(to="gallery") {{ $t('header.gallery') }}
+                    router-link.nav-link(to="contact") {{ $t('header.contact') }}
+                    router-link.nav-link(to="activities") {{ $t('header.activities') }}
+                    b-nav-item-dropdown(:text="$t('header.languages.lang')" right)
+                        b-dropdown-item(@click="selectLang('es')") {{ $t('header.languages.es') }}
+                            img.icon(src="https://firebasestorage.googleapis.com/v0/b/huetor-16ddf.appspot.com/o/icons%2Fespana%20(1).svg?alt=media&token=6fe8b235-f4d4-4c48-971b-3125842c0acb")
+                        b-dropdown-item(@click="selectLang('en')") {{ $t('header.languages.en') }}
+                            img.icon(src="https://firebasestorage.googleapis.com/v0/b/huetor-16ddf.appspot.com/o/icons%2Freino-unido%20(1).svg?alt=media&token=b44d7fa5-07a9-42f8-9fc2-3a9bdd7bbd8b")
+                        b-dropdown-item(@click="selectLang('de')") {{ $t('header.languages.de') }}
+                            img.icon(src="https://firebasestorage.googleapis.com/v0/b/huetor-16ddf.appspot.com/o/icons%2Falemania.svg?alt=media&token=05e06cb4-9b48-4a39-9471-8762b0e8e610")
+                        b-dropdown-item(@click="selectLang('fr')") {{ $t('header.languages.fr') }}
+                            img.icon(src="https://firebasestorage.googleapis.com/v0/b/huetor-16ddf.appspot.com/o/icons%2Ffrancia.svg?alt=media&token=924ce700-e45a-47ba-b232-b5062cb3e701")
 </template>
