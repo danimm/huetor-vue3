@@ -33,8 +33,8 @@
           </div>
         </q-img>
       </q-carousel-slide>
-      <q-carousel-slide :name="2" :img-src="image2"/>
-      <q-carousel-slide :name="3" :img-src="image3"/>
+      <q-carousel-slide :name="2" img-src="/images/home/slides/Slide2.jpeg"/>
+      <q-carousel-slide :name="3" img-src="/images/home/slides/Slide3.jpeg"/>
     </q-carousel>
   </div>
   <div class="overlay">
@@ -51,11 +51,13 @@
 
 <script lang="ts" setup>
 import { ref } from "vue";
+import Slide1 from '/images/home/slides/Slide1.jpeg?url'
 
 const slide = ref(1)
-const image1 = ref('https://firebasestorage.googleapis.com/v0/b/huetor-16ddf.appspot.com/o/slides%2FDJI_0482.JPG?alt=media&token=674fd592-29c7-4e86-84c1-c71b4115d4e5')
-const image2 = ref('https://firebasestorage.googleapis.com/v0/b/huetor-16ddf.appspot.com/o/slides%2FIMG_3224.JPG?alt=media&token=46c9946b-939f-42fe-b328-47d8e5dcb59d')
-const image3 = ref('https://firebasestorage.googleapis.com/v0/b/huetor-16ddf.appspot.com/o/gallery%2FSlide3.JPEG?alt=media&token=cf5b1f96-c846-400e-ae37-ac15c4717bd7')
+const image1 = ref(Slide1)
+// const image1 = ref('https://firebasestorage.googleapis.com/v0/b/huetor-16ddf.appspot.com/o/slides%2FDJI_0482.JPG?alt=media&token=674fd592-29c7-4e86-84c1-c71b4115d4e5')
+// const image2 = ref('https://firebasestorage.googleapis.com/v0/b/huetor-16ddf.appspot.com/o/slides%2FIMG_3224.JPG?alt=media&token=46c9946b-939f-42fe-b328-47d8e5dcb59d')
+// const image3 = ref('https://firebasestorage.googleapis.com/v0/b/huetor-16ddf.appspot.com/o/gallery%2FSlide3.JPEG?alt=media&token=cf5b1f96-c846-400e-ae37-ac15c4717bd7')
 </script>
 
 <style scoped>
